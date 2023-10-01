@@ -12,7 +12,7 @@
     - [Statistical Insights](#statistical-insights)
     - [Visualizations](#visualizations)
 - [Acknowledging Variability](#acknowledging-variability)
--[Summary](#summary)
+- [Summary](#summary)
 
 ## Overview
 The Italian real estate market is multifaceted, influenced by diverse factors such as location, property attributes, economic conditions, and more. Accurate house price predictions in this dynamic environment are crucial for various stakeholders, including buyers, sellers, real estate professionals, and investors. This project aims to address this challenge by harnessing data and machine learning methodologies to create a robust and reliable house price prediction model tailored to the Italian market.
@@ -25,7 +25,6 @@ After a rigorous process of data preparation, model building, and analysis, here
 
 ### Outlier Detection with Boxplots
 In our analysis, we used boxplots as a robust method to identify and visualize outliers in the dataset. Boxplots provide a clear representation of the distribution of a feature, including the presence of outliers. Outliers, which are data points significantly different from the majority, can skew model predictions.
-
 ![](Images/boxplot.png)
 
 We also implemented a strategy to handle outliers by setting them to the upper bound of the feature's distribution. This approach helped ensure the robustness of our predictive model and mitigate the influence of extreme values.
@@ -34,7 +33,6 @@ We also implemented a strategy to handle outliers by setting them to the upper b
 One of the valuable visualizations we utilized in our project is a heatmap. The heatmap is a graphical representation that displays the correlations between different features in the dataset.
 
 In our analysis, we found that the correlations on the heatmap ranged from as low as 0.01 to as high as 0.33. This information allowed us to identify which features had a significant impact on house prices and which features were less influential. The heatmap analysis provided insights into the relationships between features such as location, property size, and amenities, and how they correlated with property prices. It helped us understand which variables were most important when predicting house prices in the Italian real estate market.
-
 ![](Images/heatmap.png)
 
 ### Model Selection
@@ -61,7 +59,7 @@ In summary, we opted for the Random Forest model with GridSearchCV despite its l
 
     # Iterate through the feature names (columns)
     for feature in X.columns:
-    feature_values[feature] = float(input(f"Enter value for {feature}: "))
+        feature_values[feature] = float(input(f"Enter value for {feature}: "))
 
     # Make a price prediction
     predicted_price = rf_model.predict(pd.DataFrame([feature_values]))
