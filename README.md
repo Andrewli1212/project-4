@@ -16,7 +16,7 @@ Table of Contents
 - [Hyperparameter Tuning](#hyperparameter)
 - [Model Selection](#model_selection)
 - [Prediction](#prediction)
-- [Statistical Analysis](#statistical)
+- [Statistical Analysis](#statistical_analysis)
 - [Visualization](#visualization)
 
 ## Introduction
