@@ -73,6 +73,8 @@ Leveraging Spark SQL, we extracted essential statistics, offering deeper insight
 ### Visualizations 
 Using Tableau, we created interactive visualizations, including charts and maps, to enhance data comprehension and communicate model results effectively.
 
+**Tableau Link:** https://public.tableau.com/app/profile/jonathan.koo7596/viz/project4_16956997848100/Story1?publish=yes
+
 ## Acknowledging Variability
 It's crucial to note that while our model provides valuable predictions, real estate prices are influenced by numerous dynamic variables that can change over time. Market conditions, economic factors, and other external forces can impact property prices. Therefore, our predictions should be considered as estimates based on historical data and property features. Users should exercise discretion and consult with real estate professionals to consider all relevant factors when making real estate decisions.
 
