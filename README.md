@@ -1,8 +1,8 @@
-Italy Real Estate Price Prediction
+# Italy Real Estate Price Prediction
 
 ![](Images/housing.jpg)
 
-Table of Contents
+## Table of Contents
 - [Overview](#overview)
     - [Dataset](#dataset)
 - [Results](#results)
@@ -26,12 +26,16 @@ After a rigorous process of data preparation, model building, and analysis, here
 ### Outlier Detection with Boxplots
 In our analysis, we used boxplots as a robust method to identify and visualize outliers in the dataset. Boxplots provide a clear representation of the distribution of a feature, including the presence of outliers. Outliers, which are data points significantly different from the majority, can skew model predictions.
 
+![](Images/boxplot.png)
+
 We also implemented a strategy to handle outliers by setting them to the upper bound of the feature's distribution. This approach helped ensure the robustness of our predictive model and mitigate the influence of extreme values.
 
 ### Heatmap Analysis
 One of the valuable visualizations we utilized in our project is a heatmap. The heatmap is a graphical representation that displays the correlations between different features in the dataset.
 
 In our analysis, we found that the correlations on the heatmap ranged from as low as 0.01 to as high as 0.33. This information allowed us to identify which features had a significant impact on house prices and which features were less influential. The heatmap analysis provided insights into the relationships between features such as location, property size, and amenities, and how they correlated with property prices. It helped us understand which variables were most important when predicting house prices in the Italian real estate market.
+
+![](Images/heatmap.png)
 
 ### Model Selection
 After hyperparameter tuning, we compared the performance of two Random Forest models: one tuned with GridSearchCV and the other with RandomizedSearchCV. The evaluation metric used was the R-squared (R2) value, which measures how well the model fits the data.
@@ -50,7 +54,20 @@ While the Random Forest model with RandomizedSearchCV showed better performance 
 
 In summary, we opted for the Random Forest model with GridSearchCV despite its lower R2 values, as it offers a balance between model performance and generalization to ensure robust predictions on unseen data.
 
-**Prediction Tool:** We developed a user-friendly code that allows users to input property features, generating accurate price predictions based on the selected Random Forest model.
+**Prediction Tool:** We developed a user-friendly code that allows users to input property features, generating price predictions based on the selected Random Forest model.
+
+    # Define feature values for prediction as a dictionary
+    feature_values = {}
+
+    # Iterate through the feature names (columns)
+    for feature in X.columns:
+    feature_values[feature] = float(input(f"Enter value for {feature}: "))
+
+    # Make a price prediction
+    predicted_price = rf_model.predict(pd.DataFrame([feature_values]))
+
+    # Print the predicted price
+    print("Predicted Price:", round(predicted_price[0], 0))
 
 ### Statistical Insights 
 Leveraging Spark SQL, we extracted essential statistics, offering deeper insights into property characteristics, including median prices and other relevant information.
