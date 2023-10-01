@@ -6,7 +6,7 @@ This README provides an overview of the process used to predict house prices in 
 
 Table of Contents
 
-- [Introduction](#introduction)
+- [Introduction](#introduction)/
     -[Motivation](#motivation)
 - [Data Translation](#data_translation)
 - [Data Cleaning](#data_cleaning)
@@ -16,7 +16,7 @@ Table of Contents
 - [Hyperparameter Tuning](#hyperparameter)
 - [Model Selection](#model_selection)
 - [Prediction](#prediction)
-- [Statistical Analysis](#statistical)
+- [Statistical Analysis](#statistical_analysis)
 - [Visualization](#visualization)
 
 ## Introduction
