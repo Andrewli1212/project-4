@@ -68,7 +68,7 @@ In summary, we opted for the Random Forest model with GridSearchCV despite its l
     print("Predicted Price:", round(predicted_price[0], 0))
 
 ### Statistical Insights 
-Leveraging Spark SQL, we extracted essential statistics, offering deeper insights into property characteristics, including median prices and other relevant information.
+Leveraging Spark SQL, we extracted essential statistics, offering deeper insights into property characteristics, including average prices and other relevant information.
 
 ### Visualizations 
 Using Tableau, we created interactive visualizations, including charts and maps, to enhance data comprehension and communicate model results effectively.
